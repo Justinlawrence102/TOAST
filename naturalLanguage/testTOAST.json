@@ -1,0 +1,118 @@
+[
+   {
+      "sentence":"1",
+      "isHighlight":"false"
+   },
+   {
+      "sentence":" Who May Use the Services You may use the Services only if you agree to form a binding contract with Twitter and are not a person barred from receiving services under the laws of the applicable jurisdiction",
+      "isHighlight":"true",
+      "phraseID":"10",
+      "phrase":"You agree to not misuse the Service",
+      "UIType":"Pull Quotes and Factoids",
+      "imageName":"id_10_do_not_misuse.png",
+      "sourceURL":"https://www.flaticon.com/free-icon/hacker_2452783",
+      "confidence":" 9"
+   },
+   {
+      "sentence":" In any case, you must be at least 13 years old, or in the case of Periscope 16 years old, to use the Services",
+      "isHighlight":"true",
+      "phraseID":"19",
+      "phrase":"You must be 16 years or older to enter into the terms of the service. The Service is not intended for children under 16",
+      "UIType":"Typographic Manipulation",
+      "imageName":"",
+      "sourceURL":"",
+      "confidence":" 9"
+   },
+   {
+      "sentence":" If you are accepting these Terms and using the Services on behalf of a company, organization, government, or other legal entity, you represent and warrant that you are authorized to do so and have the authority to bind such entity to these Terms, in which case the words “you” and “your” as used in these Terms shall refer to such entity",
+      "isHighlight":"true",
+      "phraseID":"11",
+      "phrase":"We are not liable for loss or damage if you do not comply with any of the terms listed here",
+      "UIType":"Pull Quotes and Factoids",
+      "imageName":"id_11_not_liable_loss.png",
+      "sourceURL":"https://www.flaticon.com/free-icon/claim_1576378",
+      "confidence":" 9"
+   },
+   {
+      "sentence":" 2",
+      "isHighlight":"false"
+   },
+   {
+      "sentence":" Privacy Our Privacy Policy (https://www",
+      "isHighlight":"false"
+   },
+   {
+      "sentence":"twitter",
+      "isHighlight":"false"
+   },
+   {
+      "sentence":"com/privacy) describes how we handle the information you provide to us when you use our Services",
+      "isHighlight":"false"
+   },
+   {
+      "sentence":" You understand that through your use of the Services you consent to the collection and use (as set forth in the Privacy Policy) of this information, including the transfer of this information to the United States, Ireland, and/or other countries for storage, processing and use by Twitter and its affiliates",
+      "isHighlight":"false"
+   },
+   {
+      "sentence":" 3",
+      "isHighlight":"false"
+   },
+   {
+      "sentence":" Content on the Services",
+      "isHighlight":"false"
+   },
+   {
+      "sentence":" You are responsible for your use of the Services and for any Content you provide, including compliance with applicable laws, rules, and regulations",
+      "isHighlight":"false"
+   },
+   {
+      "sentence":" You should only provide Content that you are comfortable sharing with others",
+      "isHighlight":"false"
+   },
+   {
+      "sentence":" Any use or reliance on any Content or materials posted via the Services or obtained by you through the Services is at your own risk",
+      "isHighlight":"true",
+      "phraseID":"3",
+      "phrase":"Use and or reliance on the Content provided by the Service is at your own risk. We can not guarantee completness or truthfulness",
+      "UIType":"Textured",
+      "imageName":"",
+      "sourceURL":"",
+      "confidence":" 7"
+   },
+   {
+      "sentence":" We do not endorse, support, represent or guarantee the completeness, truthfulness, accuracy, or reliability of any Content or communications posted via the Services or endorse any opinions expressed via the Services",
+      "isHighlight":"false"
+   },
+   {
+      "sentence":" You understand that by using the Services, you may be exposed to Content that might be offensive, harmful, inaccurate or otherwise inappropriate, or in some cases, postings that have been mislabeled or are otherwise deceptive",
+      "isHighlight":"true",
+      "phraseID":"4",
+      "phrase":"You may be exposed on offensive, harmfull, or inacurrate content. Use at your own discgrssion",
+      "UIType":"Iconic symbols",
+      "imageName":"id_4_offensive.png",
+      "sourceURL":"https://www.flaticon.com/free-icon/profanity_2634265",
+      "confidence":" 10"
+   },
+   {
+      "sentence":" All Content is the sole responsibility of the person who originated such Content",
+      "isHighlight":"false"
+   },
+   {
+      "sentence":" We may not monitor or control the Content posted via the Services and, we cannot take responsibility for such Content",
+      "isHighlight":"false"
+   },
+   {
+      "sentence":" We reserve the right to remove Content that violates the User Agreement, including for example, copyright or trademark violations or other intellectual property misappropriation, impersonation, unlawful conduct, or harassment",
+      "isHighlight":"true",
+      "phraseID":"6",
+      "phrase":"We reserve the right to remove any conent that violates the terms of service. This includes copyrite, trademark violations, unlawful behavior, or harassment",
+      "UIType":"Textured",
+      "imageName":"",
+      "sourceURL":"",
+      "confidence":" 10"
+   },
+   {
+      "sentence":" Information regarding specific policies and the process for reporting or appealing violations can be found in our Help Center ",
+      "isHighlight":"false"
+   }
+]
