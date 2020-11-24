@@ -1,19 +1,27 @@
 const axios = require('axios');
 const cheerio = require('cheerio');
-const http = require('http');
-const { stringify } = require('querystring');
+const fs = require("fs");
+const { connect } = require('http2');
+const { resolve } = require('path');
 
-const hostname = '127.0.0.1';
-const port = 3000;
+var url = "https://twitter.com/en/tos";
+var results = [];
 
-var tos = [];
 
-axios.get('https://twitter.com/en/tos').then((response) => {
-	const $ = cheerio.load(response.data);
-	$('p').each(function(i,elem){
-		let curP = $(this).text();
-		tos.push(curP); 
-	})
-})
+function scrape(link){
+	var tos = [];
+	axios.get(link)
+		.then((response)=> {
+			if(response.status === 200) {
+				const html = response.data;
+				const $ = cheerio.load(html);
+				$('p').each(async function(i, elem) {
+					tos.push($(this).text());
+				})
+			}
+		}, (error) => console.log(err) );
+		return tos;
+}
 
-console.log(tos[0])
+results = scrape(url);
+console.log(results);
