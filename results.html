@@ -27,7 +27,18 @@
 		</nav>
 	</div>
 	<div class="main">
-        <p id="whereToPrint"></p>
+        <h1 style="color: #c42c00;">Translated Results</h1>
+        <h2><span style="text-decoration: underline;"><strong>Summary</strong></span>:</h2>
+        <p><strong>Important Facts</strong></p>
+        <ul>
+        <p id="bulletedTerms"></p>
+        </ul>
+        <p><strong>Symbolic Summary</strong></p>
+        <p><strong><img src="https://p.bigstockphoto.com/GeFvQkBbSLaMdpKXF1Zv_bigstock-Aerial-View-Of-Blue-Lakes-And--227291596.jpg" alt="" width="100" height="100" /> 
+        <img src="https://www.talkwalker.com/images/2020/blog-headers/image-analysis.png" alt="" width="100" height="100" />&nbsp;</strong></p>
+        <hr />
+        <h2><span style="text-decoration: underline;"><strong>Complete Terms of Service:</strong></span></h2>
+        <p id="completeTerms"></p>
         <script type="text/javascript">
             var toastObjectArray = [{
                 sentence: '1',
@@ -249,8 +260,20 @@
                 confidence: undefined,
                 ////getDetails: [Function (anonymous)]
               }];
-            for (i = 0; i < toastObjectArray.length; i++)
-                document.getElementById("whereToPrint").innerHTML += toastObjectArray[i].sentence + "<br>"; 
+            for (i = 0; i < toastObjectArray.length; i++) {
+                
+                if (toastObjectArray[i].isHighlight) {
+                    //add to complete terms print
+                    document.getElementById("completeTerms").innerHTML += "<mark>" + toastObjectArray[i].sentence + "</mark>" + "<br>";
+                    
+                    //add to bullet point summary
+                    document.getElementById("bulletedTerms").innerHTML += "<li>" + toastObjectArray[i].phrase + "</li>";
+                }
+                else {
+                    document.getElementById("completeTerms").innerHTML += toastObjectArray[i].sentence + "<br>"; 
+                }
+            }
         </script>
+        
 	</div>
 </body>
