@@ -32,7 +32,8 @@ app.get('/',(req,res) => {
 
 app.get('/results.html',(req,res)=> {
     link = req.query.link;
-    tos = tool.scrape(link);
+    tos = tool.test(link);
+    console.log(tos);
     fs.readFile(__dirname + "/results.html")
         .then(contents => {
             res.setHeader("Content-Type", "text/html");

@@ -5,9 +5,10 @@ const { connect } = require('http2');
 const { resolve } = require('path');
 const naturalLanguageParser = require('./parseTOSText');
 
-var url = "https://twitter.com/en/tos";
+//var url = "https://twitter.com/tos";
 var results = [];
 
+function test(url){
 scrape(url)
     .then(function(result){
         console.log(result) //this should be the TOS data
@@ -15,8 +16,10 @@ scrape(url)
     .catch(function(error){
         console.log("ERROR")
 });
+}
 
 function scrape(link){
+	url = link;
     var tos = [];
     return new Promise(function(resolve, reject){
         axios.get(link)
@@ -29,11 +32,13 @@ function scrape(link){
                 })
                // resolve(tos);
                 resolve(naturalLanguageParser.getPhrases(tos));
-            }
-        }, (error) => console.log(err) );
+			}
+			else {                
+				reject(error);
+	        }
+        }, (error) => console.log(error) );
         //return tos;
     });
 }
 
-results = scrape(url);
-console.log(results);
+module.exports = {test};
