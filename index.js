@@ -32,8 +32,15 @@ app.get('/',(req,res) => {
 
 app.get('/results.html',(req,res)=> {
     link = req.query.link;
-    tos = tool.test(link);
-    console.log(tos);
+   //tos = tool.test(link);
+    tool.callScrapper(link)
+        .then(function(result){
+            console.log(result)
+        })
+        .catch(function(error){
+            console.log("ERROR")
+    });
+    //console.log(tos);
     fs.readFile(__dirname + "/results.html")
         .then(contents => {
             res.setHeader("Content-Type", "text/html");

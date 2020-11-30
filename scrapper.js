@@ -8,14 +8,17 @@ const naturalLanguageParser = require('./parseTOSText');
 //var url = "https://twitter.com/tos";
 var results = [];
 
-function test(url){
-scrape(url)
-    .then(function(result){
-        console.log(result) //this should be the TOS data
-    })
-    .catch(function(error){
-        console.log("ERROR")
-});
+function callScrapper(url){
+    return new Promise(function(resolve, reject){
+        scrape(url)
+        .then(function(result){
+            //console.log(result) //this should be the TOS data
+            resolve(result)
+        })
+        .catch(function(error){
+            console.log("ERROR")
+        });
+    });
 }
 
 function scrape(link){
@@ -41,4 +44,4 @@ function scrape(link){
     });
 }
 
-module.exports = {test};
+module.exports = {callScrapper};
