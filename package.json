@@ -22,7 +22,8 @@
     "axios": "^0.21.0",
     "cheerio": "^1.0.0-rc.3",
     "express": "^4.17.1",
-    "express-validator": "^6.6.1"
+    "express-validator": "^6.6.1",
+    "natural": "^2.1.5"
   },
   "devDependencies": {
     "nodemon": "^2.0.6"

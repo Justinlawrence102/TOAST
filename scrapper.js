@@ -3,6 +3,7 @@ const cheerio = require('cheerio');
 const fs = require("fs");
 const { connect } = require('http2');
 const { resolve } = require('path');
+const naturalLanguageParser = require('./parseTOSText');
 
 var url = "https://twitter.com/en/tos";
 var results = [];
@@ -16,6 +17,7 @@ function scrape(link){
 				const html = response.data;
 				const $ = cheerio.load(html);
 				$('p').each(async function(i, elem) {
+                    naturalLanguageParser.getPhrases($(this).text())
 					tos.push($(this).text());
 				})
 			}
