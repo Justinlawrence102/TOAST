@@ -17,9 +17,9 @@ function scrape(link){
 				const html = response.data;
 				const $ = cheerio.load(html);
 				$('p').each(async function(i, elem) {
-                    naturalLanguageParser.getPhrases($(this).text())
 					tos.push($(this).text());
 				})
+                naturalLanguageParser.getPhrases(tos)
 			}
 		}, (error) => console.log(err) );
 		return tos;
