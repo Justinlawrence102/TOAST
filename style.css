@@ -84,11 +84,14 @@ section.sec1{
   background-position: center;
 }
 .main {
-  margin-top: 100px; /* Add a top margin to avoid content overlay */
+  margin-top: 150px; /* Add a top margin to avoid content overlay */
   margin-left: 120px;
+  margin-right: 120px;
+
 }
 .topleft {
   position: absolute;
   top: 0px;
   left: 16px;
 }
+
