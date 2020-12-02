@@ -1,3 +1,23 @@
+<?php 
+    if(isset($_POST['submit'])){
+        $to = "hannah.williams44.1997@gmail.com"; // this is your Email address
+        $from = $_POST['email']; // this is the sender's Email address
+        $name = $_POST['name'];
+        $subject = "Form submission";
+        $subject2 = "Copy of your form submission";
+        $message = $first_name . " wrote the following:" . "\n\n" . $_POST['message'];
+        $message2 = "Here is a copy of your message " . $name . "\n\n" . $_POST['message'];
+
+        $headers = "From:" . $from;
+        $headers2 = "From:" . $to;
+        mail($to,$subject,$message,$headers);
+        mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
+        echo "Mail Sent. Thank you " . $name . ", we will contact you shortly.";
+        // You can also use header('Location: thank_you.php'); to redirect to another page.
+    }
+?>
+
+<!DOCTYPE html>
 <head>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="style.css">
@@ -26,16 +46,16 @@
 		</nav>
 	</div>
 	<div class="main">
-		<form>
+		<form id="contactform" action="" method="POST">
 			<br></br>
 			<br></br>
 			<label for="name">Your Name:</label>
-			<input type="text" id="name" name="name"><br>
+			<input type="text" id="name" name="name" required><br>
 			<label for="email">Your Email:</label>
-			<input type="text" id="email" name="email"><br><br>
+			<input type="text" id="email" name="email" required><br><br>
 			<label for="message">Message:</label>
-			<input type="text" id="message" name="message" style="height:400px"><br>
-			<input type="submit" value="Submit">
+			<input type="text" id="message" name="message" style="height:200px" required><br>
+			<input type="submit" value="Submit" name="submit">
 		</form>
 	</div>
 </body>
