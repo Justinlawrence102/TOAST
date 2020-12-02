@@ -16,7 +16,8 @@ var phrases = new Array();
 
 function getPhrases(blockOfTextArray) {
     var TOASTTranslation = new Array();
-    
+    var existingPhrases = new Array();
+
     return new Promise(function(resolve, reject){
         axios.get('http://www.toastapp.infinityfreeapp.com/getDatabaseData.php')
         .then((response) => {
@@ -52,11 +53,21 @@ function getPhrases(blockOfTextArray) {
                         //  console.log(toastScore)
                         if (toastScore >= 7) {
                             if (toastScore > 10) {toastScore = 10}
-                            let testSentence = new TOSSentence(sentences[i], true, phrases[j]['phraseID'], phrases[j]['phrase'], phrases[j]['UIType'], phrases[j]['imageName'], phrases[j]['sourceURL'], toastScore);
-                            //testSentence.getDetails()
-                            TOASTTranslation.push(testSentence)
-                            foundTranslation = true
-                            break;
+                            if (existingPhrases.includes(phrases[j]['phraseID'])) {
+                                let testSentence = new TOSSentence(sentences[i], true);
+                                //testSentence.getDetails()
+                                TOASTTranslation.push(testSentence)
+                                foundTranslation = true
+                                break;
+                            }
+                            else {
+                                existingPhrases.push(phrases[j]['phraseID'])
+                                let testSentence = new TOSSentence(sentences[i], true, phrases[j]['phraseID'], phrases[j]['phrase'], phrases[j]['UIType'], phrases[j]['imageName'], phrases[j]['sourceURL'], toastScore);
+                                //testSentence.getDetails()
+                                TOASTTranslation.push(testSentence)
+                                foundTranslation = true
+                                break;
+                            }
                         }
                     }
                     if (!foundTranslation && sentences[i] != "") {

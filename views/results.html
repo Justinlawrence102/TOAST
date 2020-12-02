@@ -66,7 +66,7 @@
 
             for (i = 0; i < toastObjectArray.length; i++) {
                 //Check for highlighting => highlight and add to bullet points & full summary
-                if (toastObjectArray[i].isHighlight) {
+                if (toastObjectArray[i].isHighlight && toastObjectArray[i].phrase != undefined) {
                     //add to complete terms print
                     document.getElementById("completeTerms").innerHTML += "<mark>" + toastObjectArray[i].sentence + "</mark>" + "<br>";
                     
