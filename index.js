@@ -15,6 +15,7 @@ var tos = [];
 app.use(express.json());
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'ejs');
+app.set('views', './');
 
 app.listen(PORT, () => console.log(`Express server currently running on port ${PORT}`));
 
