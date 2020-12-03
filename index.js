@@ -15,6 +15,7 @@ var tos = [];
 
 app.use(express.static(path.join(__dirname, "/assets")));
 //app.use(express.json());
+console.log(__dirname)
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'ejs');
 app.set('views', './');
