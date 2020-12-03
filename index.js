@@ -19,7 +19,7 @@ app.set('views', './');
 
 app.listen(PORT, () => console.log(`Express server currently running on port ${PORT}`));
 
-app.get((req,res), '/' => {
+app.get('/',(req,res) => {
 	fs.readFile(__dirname + "/index.html")
         .then(contents => {
             res.setHeader("Content-Type", "text/html");
@@ -33,7 +33,7 @@ app.get((req,res), '/' => {
         });
 });
 
-app.get((req,res), '/results.html'=> {
+app.get('/results.html',(req,res)=> {
     link = req.query.link;
     tool.callScrapper(link)
         .then(function(result){
@@ -62,7 +62,7 @@ app.get('/index.html',(req,res) => {
 });
 
 
-app.get((req,res), '/about.html' => {
+app.get('/about.html',(req,res) => {
 	fs.readFile(__dirname + "/about.html")
         .then(contents => {
             res.setHeader("Content-Type", "text/html");
@@ -76,7 +76,7 @@ app.get((req,res), '/about.html' => {
         });
 });
 
-app.get((req,res), '/contact.html' => {
+app.get('/contact.html',(req,res) => {
 	fs.readFile(__dirname + "/contact.html")
         .then(contents => {
             res.setHeader("Content-Type", "text/html");
