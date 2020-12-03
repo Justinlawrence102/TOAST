@@ -8,11 +8,13 @@ var tool = require("./scrapper.js");
 
 const app = express();
 const PORT = 3000;
+const path = require('path'); 
 
 var link = "";
 var tos = [];
 
-app.use(express.json());
+app.use(express.static(path.join(__dirname, "/assets")));
+//app.use(express.json());
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'ejs');
 app.set('views', './');
@@ -38,7 +40,7 @@ app.get('/results.html',(req,res)=> {
     tool.callScrapper(link)
         .then(function(result){
             res.render('results.html',{
-            test: JSON.stringify(result).replace(/\\/g, '\\\\').replace(/"/g, '\\\"')
+            send_var: JSON.stringify(result).replace(/\\/g, '\\\\').replace(/"/g, '\\\"')
                 });
         })
         .catch(function(error){

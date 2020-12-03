@@ -33,35 +33,32 @@
         <p id="bulletedTerms"></p>
         </ul>
         <p><strong>Symbolic Summary</strong></p>
-        <!--<p><strong><img src="https://p.bigstockphoto.com/GeFvQkBbSLaMdpKXF1Zv_bigstock-Aerial-View-Of-Blue-Lakes-And--227291596.jpg" alt="" width="100" height="100" /> 
-        <img src="https://www.talkwalker.com/images/2020/blog-headers/image-analysis.png" alt="" width="100" height="100" />&nbsp;</strong></p> -->
         <img src="/icons_vignettes/id_35_36_remove_account.png" style="display:none;" id="id_35_36_remove_account.png" width="100" height="100"/>
-        <p>&nbsp;</p>
         <img src="/icons_vignettes/id_11_not_liable_loss.png" style="display:none;" id="id_11_not_liable_loss.png" width="100" height="100"/>
-        <p>&nbsp;</p>
         <img src="/icons_vignettes/id_10_do_not_misuse.png" style="display:none;" id="id_10_do_not_misuse.png" width="100" height="100"/>
-        <p>&nbsp;</p>
         <img src="/icons_vignettes/id_4_offensive.png" style="display:none;" id="id_4_offensive.png" width="100" height="100"/>
-        <p>&nbsp;</p>
+        <img src="/icons_vignettes/id_0_30_legal_guardian.png" style="display:none;" id="id_0_30_legal_guardian.png" width="100" height="100"/>
+        <img src="/icons_vignettes/id_5_responsible_own_content.png" style="display:none;" id="id_5_responsible_own_content.png" width="100" height="100"/>
+        <img src="/icons_vignettes/id_12_end_legal.png" style="display:none;" id="id_12_end_legal.png" width="100" height="100"/>
+        <img src="/icons_vignettes/id_14_do_not_modify.png" style="display:none;" id="id_14_do_not_modify.png" width="100" height="100"/>
+        <img src="/icons_vignettes/id_15_do_not_interfere.png" style="display:none;" id="id_15_do_not_interfere.png" width="100" height="100"/>
+        <img src="/icons_vignettes/id_16_17_do_not_copy_reproduce.png" style="display:none;" id="id_16_17_do_not_copy_reproduce.png" width="100" height="100"/>
+        <img src="/icons_vignettes/id_18_reasonable_safeguards.png" style="display:none;" id="id_18_reasonable_safeguards.png" width="100" height="100"/>
+        <img src="/icons_vignettes/id_20_credit_card.png" style="display:none;" id="id_20_credit_card.png" width="100" height="100"/>
+        <img src="/icons_vignettes/id_26_39_communication.png" style="display:none;" id="id_26_39_communication.png" width="100" height="100"/>
+        <img src="/icons_vignettes/id_35_36_remove_account.png" style="display:none;" id="id_35_36_remove_account.png" width="100" height="100"/>
+        <img src="/icons_vignettes/id_40_41_not_accurate.png" style="display:none;" id="id_40_41_not_accurate.png" width="100" height="100"/>
+        <br/>
+        <img src="/icons_vignettes/id7_fullrights_vignette.JPG" style="display:none;" id="id7_fullrights_vignette.JPG" width="300" height="100"/>
+        <br/>
+        <img src="/icons_vignettes/id25_respectothers_vignette.JPG" style="display:none;" id="id25_respectothers_vignette.JPG" width="300" height="100"/>
         <hr />
 
         <h2><span style="text-decoration: underline;"><strong>Complete Terms of Service:</strong></span></h2>
         <p id="completeTerms"></p>
         <script type="text/javascript">
-            //console.log(testing)
-            var toastObjectArray = JSON.parse("<%- test %>");//<%= test %>
-
-            
-            
-            
-            var imageDict = new Object();
-            //var imageDict = {
-            //    id_40_41_not_accurate.png: "https://drive.google.com/file/d/1zS8xg_Ro5Y45Rem86NY5El23sdZA4443/view?usp=sharing",
-             //   id_35_36_remove_account.png: "https://drive.google.com/file/d/1PGaHcwZCPL1294w8i9Nb8TWRIPoroczn/view?usp=sharing",
-             //   id_11_not_liable_loss.png: "https://drive.google.com/file/d/1XHPlrS5_zGdPjOfufbxdlE8n_h1QIEGx/view?usp=sharing",
-             //   id_10_do_not_misuse.png: "https://drive.google.com/file/d/1Jsj1XOqu3VK-hbKDewY7279mEmIMdo8T/view?usp=sharing"
-            //};
-
+            var toastObjectArray = JSON.parse("<%- send_var %>");
+            console.log(toastObjectArray)
 
 
             for (i = 0; i < toastObjectArray.length; i++) {
@@ -79,11 +76,14 @@
                     document.getElementById("completeTerms").innerHTML += toastObjectArray[i].sentence + "<br>"; 
                 }
                 
-                /*
-                if (toastObjectArray[i].imageName != undefined) {
+                
+                if (toastObjectArray[i].imageName != undefined && toastObjectArray[i].imageName != null) {
                     var imageNameString = toastObjectArray[i].imageName;
-                    document.getElementById(imageNameString).style.cssText = "display: block;"; 
-                }*/
+                    console.log("imageNameString is : " + imageNameString);
+                    if (imageNameString) {
+                        document.getElementById(imageNameString).style.cssText = "display: block;"; 
+                    }
+                }
                 
             }
         </script>
