@@ -10,8 +10,10 @@ const app = express();
 const PORT = 3000;
 const path = require('path'); 
 
-app.use(express.static(path.join(__dirname, "public")));
-app.use(express.static(path.join(__dirname, "public/icons_vignettes")));
+//app.use(express.static(path.join(__dirname, "public")));
+//app.use(express.static(path.join(__dirname, "public/icons_vignettes")));
+app.use('/', express.static(path.join(__dirname, 'public')))
+app.use('/', express.static(path.join(__dirname, 'public/icons_vignettes')))
 //app.use(express.json());
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'ejs');
@@ -42,7 +44,6 @@ app.get('/results.html',(req,res)=> {
         .then(function(result){
             res.render('results.html',{
             send_var: JSON.stringify(result).replace(/\\/g, '\\\\').replace(/"/g, '\\\"')
-            console.log(send_var)
                 });
         })
         .catch(function(error){
