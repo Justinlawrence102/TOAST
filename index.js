@@ -13,9 +13,9 @@ const path = require('path');
 var link = "";
 var tos = [];
 
-app.use(express.static(path.join(__dirname, "/assets")));
+var pwd = process.cwd()
+app.use(express.static(path.join(pwd, "/assets")));
 //app.use(express.json());
-console.log(__dirname)
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'ejs');
 app.set('views', './');
