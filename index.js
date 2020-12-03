@@ -18,7 +18,7 @@ app.use('/', express.static(path.join(__dirname, 'public/icons_vignettes')))
 //app.use(express.json());
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'ejs');
-//app.set('views', './');
+app.set('views', './');
 
 app.listen(PORT, () => console.log(`Express server currently running on port ${PORT}`));
 
