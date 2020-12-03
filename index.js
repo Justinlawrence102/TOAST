@@ -10,9 +10,6 @@ const app = express();
 const PORT = 3000;
 const path = require('path'); 
 
-var link = "";
-var tos = [];
-
 app.use(express.static(path.join(__dirname, "/assets")));
 //app.use(express.json());
 app.engine('html', require('ejs').renderFile);
@@ -20,6 +17,9 @@ app.set('view engine', 'ejs');
 app.set('views', './');
 
 app.listen(PORT, () => console.log(`Express server currently running on port ${PORT}`));
+
+var link = "";
+var tos = [];
 
 app.get('/',(req,res) => {
 	fs.readFile(__dirname + "/index.html")
