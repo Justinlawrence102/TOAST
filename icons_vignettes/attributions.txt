@@ -1,0 +1,20 @@
+id_4: flaticon.com (https://www.flaticon.com/free-icon/profanity_2634265?term=profanity&page=1&position=3)
+id_5: flaticon.com (https://www.flaticon.com/free-icon/knowledge_3603994?term=hands%20lightbulb&page=1&position=2)
+id_10: flaticon.com (https://www.flaticon.com/free-icon/hacker_2452783?term=abuse&page=1&position=72)
+id_11 : flaticon.com (https://www.flaticon.com/free-icon/claim_1576378?term=financial%20damages&page=1&position=1)
+id_12: flaticon.com (https://www.flaticon.com/free-icon/tear_2911106?term=tear%20contract&page=1&position=2)
+id_14: flaticon.com (https://www.flaticon.com/free-icon/pencil_650143?term=editing&page=1&position=16)
+id_15: flaticon.com (https://www.flaticon.com/free-icon/hacker_1087675?term=hacking&page=1&position=73)
+id_16_17: flaticon.com (https://www.flaticon.com/free-icon/browser_348368?term=copy%20computer&page=1&position=19)
+id_18: flaticon.com (https://www.flaticon.com/free-icon/secure-folder_388523?term=secure%20folder&page=1&position=2)
+id_20: flaticon.com (https://www.flaticon.com/free-icon/account_1047792?term=account%20protection&page=1&position=1 and https://www.flaticon.com/free-icon/select_636047?term=finger%20point&page=1&position=4)
+id_21: flaticon.com (https://www.flaticon.com/free-icon/refund_181645?term=refunds&page=1&position=2)
+id_26_39: flaticon.com (https://www.flaticon.com/free-icon/email_561127?term=email&page=1&position=2)
+id_29: flaticon.com (https://www.flaticon.com/free-icon/account_1047792?term=account%20protection&page=1&position=1)
+id_0_30: flaticon.com (https://www.flaticon.com/free-icon/couple_520731?term=parent&page=1&position=24)
+id_35_36: flaticon.com (https://www.flaticon.com/free-icon/user_2522268?term=remove%20account&page=1&position=1)
+id_40_41: flaticon.com (https://www.flaticon.com/free-icon/wrong_2910809)
+
+
+
+

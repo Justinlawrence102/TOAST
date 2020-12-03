@@ -20,23 +20,21 @@
 			<ul>
 				<img class="topleft" src="Toast.png" alt="logo" style="width:300px;height:100px;">
 				<li><a href="index.html">TOAST</a></li>
-				<li><a href="popular.html">Popular Websites</a></li>
 				<li><a href="about.html">About Us</a></li>
 				<li><a href="contact.html">Contact Us</a></li>
 			</ul>
 		</nav>
 	</div>
 	<div class="main">
-		<form>
-			<br></br>
-			<br></br>
+        <h3>Contact us at <a href = "mailto:toastapplicationteam@gmail.com">toastapplicationteam@gmail.com</a>!</h3>
+		<form id="contactform" action="mailto:toastapplicationteam@gmail.com?subject=Feedback from TOAST Application" method="GET">
 			<label for="name">Your Name:</label>
-			<input type="text" id="name" name="name"><br>
+			<input type="text" id="name" name="name" required><br>
 			<label for="email">Your Email:</label>
-			<input type="text" id="email" name="email"><br><br>
+			<input type="text" id="email" name="email" required><br><br>
 			<label for="message">Message:</label>
-			<input type="text" id="message" name="message" style="height:400px"><br>
-			<input type="submit" value="Submit">
+			<input type="text" id="message" name="message" style="height:200px" required><br>
+			<input type="submit" value="Submit" name="submit">
 		</form>
 	</div>
 </body>
