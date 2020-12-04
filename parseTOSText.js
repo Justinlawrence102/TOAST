@@ -62,7 +62,7 @@ function getPhrases(blockOfTextArray) {
                             }
                             else {
                                 existingPhrases.push(phrases[j]['phraseID'])
-                                let testSentence = new TOSSentence(sentences[i], true, phrases[j]['phraseID'], phrases[j]['phrase'], phrases[j]['UIType'], phrases[j]['imageName'], phrases[j]['sourceURL'], toastScore);
+                                let testSentence = new TOSSentence(sentences[i], true, phrases[j]['phraseID'], phrases[j]['phrase'], phrases[j]['UIType'], phrases[j]['imageName'], phrases[j]['sourceURL'], toastScore, phrases[j]['phraseTitle']);
                                 //testSentence.getDetails()
                                 TOASTTranslation.push(testSentence)
                                 foundTranslation = true
