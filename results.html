@@ -92,7 +92,11 @@
                     console.log(toastObjectArray[i].imageName) //debug
                     var imageNameString = toastObjectArray[i].imageName;
                     if (imageNameString) {
-                        document.getElementById(imageNameString).style.cssText = "display: block;"; 
+                        document.getElementById(imageNameString).style.cssText = "display: block;";
+                        let image = document.getElementById("text_"+imageNameString)
+                        if (image != null) {
+                            image.innerHTML = toastObjectArray[i].phraseTitle;
+                        }
                     }
                 }
                 
