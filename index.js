@@ -43,7 +43,7 @@ app.get('/results.html',(req,res)=> {
     link = req.query.link;
     tool.callScrapper(link)
         .then(function(result){
-            console.log(result)
+            //console.log(result)
             res.render('results.html',{
             send_var: JSON.stringify(result).replace(/\\/g, '\\\\').replace(/"/g, '\\\"')
                 });
