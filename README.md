@@ -1,10 +1,3 @@
-
-
-Creators:
-Hannah Williams
-Justin Lawrence
-Chase Root
-
 # TOAST
 
 TOAST (Terms of Applicable Service Translator): https://toastuf.glitch.me/
